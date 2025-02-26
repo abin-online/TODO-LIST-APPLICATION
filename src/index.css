@@ -85,3 +85,34 @@ button:focus-visible {
     background: linear-gradient(135deg, #0056b3, #004494);
   }
 } */
+
+
+/* Custom Toast Styling - Smaller & Sleeker */
+.Toastify__toast {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px; /* Reduce font size */
+  padding: 8px 12px; /* Adjust padding */
+  min-height: 40px; /* Reduce height */
+  border-radius: 6px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: white;
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #FF5252, #D32F2F);
+  color: white;
+}
+
+.Toastify__toast--info {
+  background: linear-gradient(135deg, #2196F3, #1976D2);
+  color: white;
+}
+
+.Toastify__progress-bar {
+  height: 3px !important; /* Thinner progress bar */
+  background: #ffd700 !important; /* Gold color */
+}
