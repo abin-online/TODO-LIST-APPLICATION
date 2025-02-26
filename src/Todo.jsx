@@ -65,6 +65,10 @@ const Todo = () => {
     };
 
     const saveEdit = (index) => {
+        if(!editedValue.trim()) {
+            toast.warn("Task cannot be empty!");
+            return;
+        }
         setToDoList((prev) => {
             const editedList = prev.map((item, i) =>
                 index === i ? { ...item, text: editedValue } : item
