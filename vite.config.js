@@ -1,15 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(),
-  tailwindcss(),
-  ],
+  plugins: [react()],
   server: {
-    host: "0.0.0.0", // Bind to all network interfaces
-    port: 3000, // Ensure a fixed port
+    host: "0.0.0.0", // Allow access from external networks
+    port: 5173, // Use Vite's default port or your preferred one
   },
-})
+  preview: {
+    allowedHosts: ["todo-list-application-4.onrender.com"], // Add Render's domain
+  },
+});
